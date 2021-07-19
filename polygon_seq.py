@@ -6,6 +6,11 @@ class PolygonSeq:
         self.vertices = vertices
         self.radius = radius
 
+        if self.vertices < 3:
+            raise ValueError(
+                "Number of edges/vertices should be equal to or greater than 3"
+            )
+
     def __len__(self):
         return self.vertices
 

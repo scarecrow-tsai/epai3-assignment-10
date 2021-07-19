@@ -11,6 +11,11 @@ class Polygon:
         self.num_vertices = num_vertices
         self.circum_radius = circum_radius
 
+        if self.num_vertices < 3:
+            raise ValueError(
+                "Number of edges/vertices should be equal to or greater than 3"
+            )
+
     @property
     def num_vertices(self):
         """
